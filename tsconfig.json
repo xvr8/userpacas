@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest"],
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
@@ -19,6 +20,6 @@
     "forceConsistentCasingInFileNames": true,  
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"]
 }

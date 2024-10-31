@@ -44,11 +44,8 @@ export class UserService {
   }
 
   async delete(id: number) {
-    const user = await this.userRepository.findOne(id);
-
-    if (!user) {
-      throw new NotFoundException('No se encontró el usuario');
-    }
+    const user =await this.validateUserExists(id);
+  
 
     user.isActive = false;
     return this.userRepository.create(user);
